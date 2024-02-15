@@ -31,16 +31,16 @@ namespace ODOOSVC
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ODOOSVCForm));
             this.HeaderPanel = new System.Windows.Forms.Panel();
-            this.CloseLabel = new System.Windows.Forms.Label();
-            this.MinimizeLabel = new System.Windows.Forms.Label();
             this.HeaderLabel = new System.Windows.Forms.Label();
+            this.HeaderIcon = new System.Windows.Forms.PictureBox();
+            this.MinimizeLabel = new System.Windows.Forms.Label();
+            this.CloseLabel = new System.Windows.Forms.Label();
             this.ODServiceLabel = new System.Windows.Forms.Label();
             this.ODServiceRestart = new System.Windows.Forms.Button();
             this.ODServiceStop = new System.Windows.Forms.Button();
             this.PostServiceStop = new System.Windows.Forms.Button();
             this.PostServiceRestart = new System.Windows.Forms.Button();
             this.PostServiceLabel = new System.Windows.Forms.Label();
-            this.HeaderIcon = new System.Windows.Forms.PictureBox();
             this.HeaderPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HeaderIcon)).BeginInit();
             this.SuspendLayout();
@@ -58,17 +58,28 @@ namespace ODOOSVC
             this.HeaderPanel.TabIndex = 0;
             this.HeaderPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HeaderPanel_MouseDown);
             // 
-            // CloseLabel
+            // HeaderLabel
             // 
-            this.CloseLabel.AutoSize = true;
-            this.CloseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CloseLabel.ForeColor = System.Drawing.Color.White;
-            this.CloseLabel.Location = new System.Drawing.Point(289, 24);
-            this.CloseLabel.Name = "CloseLabel";
-            this.CloseLabel.Size = new System.Drawing.Size(31, 29);
-            this.CloseLabel.TabIndex = 0;
-            this.CloseLabel.Text = "X";
-            this.CloseLabel.Click += new System.EventHandler(this.CloseLabel_Click);
+            this.HeaderLabel.AutoSize = true;
+            this.HeaderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HeaderLabel.ForeColor = System.Drawing.Color.White;
+            this.HeaderLabel.Location = new System.Drawing.Point(53, 25);
+            this.HeaderLabel.Name = "HeaderLabel";
+            this.HeaderLabel.Size = new System.Drawing.Size(136, 29);
+            this.HeaderLabel.TabIndex = 2;
+            this.HeaderLabel.Text = "Odoo SVC";
+            this.HeaderLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HeaderLabel_MouseDown);
+            // 
+            // HeaderIcon
+            // 
+            this.HeaderIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HeaderIcon.BackgroundImage")));
+            this.HeaderIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.HeaderIcon.Location = new System.Drawing.Point(16, 11);
+            this.HeaderIcon.Name = "HeaderIcon";
+            this.HeaderIcon.Size = new System.Drawing.Size(35, 55);
+            this.HeaderIcon.TabIndex = 3;
+            this.HeaderIcon.TabStop = false;
+            this.HeaderIcon.Click += new System.EventHandler(this.HeaderIcon_Click);
             // 
             // MinimizeLabel
             // 
@@ -82,17 +93,17 @@ namespace ODOOSVC
             this.MinimizeLabel.Text = "-";
             this.MinimizeLabel.Click += new System.EventHandler(this.MinimizeLabel_Click);
             // 
-            // HeaderLabel
+            // CloseLabel
             // 
-            this.HeaderLabel.AutoSize = true;
-            this.HeaderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HeaderLabel.ForeColor = System.Drawing.Color.White;
-            this.HeaderLabel.Location = new System.Drawing.Point(53, 25);
-            this.HeaderLabel.Name = "HeaderLabel";
-            this.HeaderLabel.Size = new System.Drawing.Size(136, 29);
-            this.HeaderLabel.TabIndex = 2;
-            this.HeaderLabel.Text = "Odoo SVC";
-            this.HeaderLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HeaderLabel_MouseDown);
+            this.CloseLabel.AutoSize = true;
+            this.CloseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CloseLabel.ForeColor = System.Drawing.Color.White;
+            this.CloseLabel.Location = new System.Drawing.Point(289, 24);
+            this.CloseLabel.Name = "CloseLabel";
+            this.CloseLabel.Size = new System.Drawing.Size(31, 29);
+            this.CloseLabel.TabIndex = 0;
+            this.CloseLabel.Text = "X";
+            this.CloseLabel.Click += new System.EventHandler(this.CloseLabel_Click);
             // 
             // ODServiceLabel
             // 
@@ -155,17 +166,6 @@ namespace ODOOSVC
             this.PostServiceLabel.Size = new System.Drawing.Size(125, 25);
             this.PostServiceLabel.TabIndex = 4;
             this.PostServiceLabel.Text = "Postgre SQL";
-            // 
-            // HeaderIcon
-            // 
-            this.HeaderIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HeaderIcon.BackgroundImage")));
-            this.HeaderIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.HeaderIcon.Location = new System.Drawing.Point(16, 11);
-            this.HeaderIcon.Name = "HeaderIcon";
-            this.HeaderIcon.Size = new System.Drawing.Size(35, 55);
-            this.HeaderIcon.TabIndex = 3;
-            this.HeaderIcon.TabStop = false;
-            this.HeaderIcon.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HeaderIcon_MouseDown);
             // 
             // ODOOSVCForm
             // 
